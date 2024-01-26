@@ -13,7 +13,7 @@ import FormButton from '../common/form-button';
 
 interface PostCreateFormProps {
   slug: string;
-}
+} 
 
 export default function PostCreateForm({ slug }: PostCreateFormProps) {
   const [formState, action] = useFormState(

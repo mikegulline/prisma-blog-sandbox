@@ -1,7 +1,7 @@
-import { db } from '@/db/index';
 import PostCreateForm from '@/_components/posts/post-create-form';
 import { Divider } from '@nextui-org/react';
-
+import { fetchPostsByTopicSlug } from '@/_db/queries/posts';
+import PostList from '@/_components/posts/post-list';
 interface TopicsShowPageProps {
   params: {
     slug: string;
@@ -9,15 +9,12 @@ interface TopicsShowPageProps {
 }
 export default async function TopicsShowPage({ params }: TopicsShowPageProps) {
   const { slug } = params;
-  // const topic = await db.post.findFirst({
-  //   where: {
-  //     slug,
-  //   },
-  // });
+
   return (
     <div className='grid grid-cols-4 gap-4 p-4'>
       <div className='col-span-3'>
         <h1 className='text-2xl font-bold mb-2'>{slug}</h1>
+        <PostList fetchData={() => fetchPostsByTopicSlug(slug)} />
       </div>
       <div className='border shadow py-3 px-2'>
         <PostCreateForm slug={slug} />
