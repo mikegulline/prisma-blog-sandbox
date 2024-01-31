@@ -13,12 +13,16 @@
     "@auth/prisma-adapter": "1.0.6",
     "@nextui-org/react": "^2.2.9",
     "@prisma/client": "^5.8.1",
-    "framer-motion": "^11.0.2",
+    "@studio-freight/react-lenis": "^0.0.43",
+    "clsx": "^2.1.0",
+    "framer-motion": "^11.0.3",
     "next": "14.1.0",
     "next-auth": "5.0.0-beta.3",
     "prisma": "^5.8.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "tailwind-merge": "^2.2.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
