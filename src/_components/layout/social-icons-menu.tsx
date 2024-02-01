@@ -18,16 +18,16 @@ const socialLinks: SocialLinks[] = [
     icon: SiGithub,
     href: 'https://github.com/mikegulline/',
   },
-  {
-    title: 'Instagram',
-    icon: SiInstagram,
-    href: 'https://www.instagram.com/',
-  },
-  {
-    title: 'YouTube',
-    icon: SiYoutube,
-    href: 'https://www.youtube.com/',
-  },
+  // {
+  //   title: 'Instagram',
+  //   icon: SiInstagram,
+  //   href: 'https://www.instagram.com/',
+  // },
+  // {
+  //   title: 'YouTube',
+  //   icon: SiYoutube,
+  //   href: 'https://www.youtube.com/',
+  // },
 ];
 
 export default function SocialIconsMenu() {
@@ -36,7 +36,8 @@ export default function SocialIconsMenu() {
       <Link
         href={href}
         title={title}
-        className='rounded-full border border-neutral-600 hover:bg-neutral-200 hover:text-black flex justify-center items-center w-12 h-12'
+        target='_blank'
+        className='rounded-full border border-neutral-700 hover:bg-neutral-200 hover:text-black flex justify-center items-center w-12 h-12'
       >
         <Icon />
       </Link>
