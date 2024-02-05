@@ -20,7 +20,7 @@ function useMenuAnimation(isOpen: boolean) {
   const [scope, animate] = useAnimate();
 
   useEffect(() => {
-    animate('#menu-closed', { height: isOpen ? 0 : 178 });
+    animate('#menu-closed', { height: isOpen ? 6 : 178 });
     animate('#menu-open', { height: isOpen ? 795 : 177 });
     animate('#open-menu', { rotate: isOpen ? -180 : 0 }, { duration: 0.3 });
     animate('#close-menu', { rotate: isOpen ? 0 : 180 }, { duration: 0.3 });
@@ -32,6 +32,8 @@ function useMenuAnimation(isOpen: boolean) {
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const scope = useMenuAnimation(isOpen);
+  const sty = `border-radius: 10px;border: 5px solid #cc0000;padding: 20px !important; line-height: 100px; font-size: 24px; background-color: #ff0000;color: white;`;
+  console.log('%cThis is a funky console.log()', sty);
   return (
     <>
       <header
@@ -95,46 +97,46 @@ export default function Header() {
           {/* Main Menu */}
           <div id='menu-open-main-menu'>
             <div className='relative border-b border-neutral-800'>
-              <Container className='grid grid-cols-2'>
+              <Container className='grid grid-cols-1 lg:grid-cols-2 '>
                 <Link
                   href='/about'
-                  className='font-display group isolate relative p-16 odd:pl-0 even:pr-0 even:border-l border-neutral-800 text-5xl'
+                  className='group isolate relative py-10 lg:p-16 lg:odd:pl-0 lg:even:pr-0 lg:even:border-l border-neutral-800 text-5xl'
                 >
                   About
-                  <span className='-z-10 inset-y-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 group-odd:right-0 group-even:left-0'></span>
+                  <span className='-z-10 left-0 inset-y-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 lg:group-odd:right-0 lg:group-even:left-0'></span>
                 </Link>
 
                 <Link
                   href='/resume'
-                  className='group isolate relative p-16 odd:pl-0 even:pr-0 even:border-l border-neutral-800 text-5xl'
+                  className='group isolate relative py-10 lg:p-16 lg:odd:pl-0 lg:even:pr-0 lg:even:border-l border-neutral-800 text-5xl'
                 >
                   Résumé
-                  <span className='-z-10 inset-y-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 group-odd:right-0 group-even:left-0'></span>
+                  <span className='-z-10 inset-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 lg:group-odd:right-0 lg:group-even:left-0'></span>
                 </Link>
               </Container>
             </div>
             <div className='relative border-b border-neutral-800'>
-              <Container className='grid grid-cols-2  border-neutral-800'>
+              <Container className='grid grid-cols-1 lg:grid-cols-2  border-neutral-800'>
                 <Link
                   href='/works'
-                  className='group isolate relative p-16 odd:pl-0 even:pr-0 even:border-l border-neutral-800 text-5xl'
+                  className='group isolate relative py-10 lg:p-16 lg:odd:pl-0 lg:even:pr-0 lg:even:border-l border-neutral-800 text-5xl'
                 >
                   Works
-                  <span className='-z-10 inset-y-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 group-odd:right-0 group-even:left-0'></span>
+                  <span className='-z-10 left-0 inset-y-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 lg:group-odd:right-0 lg:group-even:left-0'></span>
                 </Link>
 
                 <Link
                   href='/contact'
-                  className='group isolate relative p-16 odd:pl-0 even:pr-0 even:border-l border-neutral-800 text-5xl'
+                  className='group isolate relative py-10 lg:p-16 lg:odd:pl-0 lg:even:pr-0 lg:even:border-l border-neutral-800 text-5xl'
                 >
                   Contact
-                  <span className='-z-10 inset-y-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 group-odd:right-0 group-even:left-0'></span>
+                  <span className='-z-10 left-0 inset-y-0 w-screen absolute opacity-0 bg-neutral-900 group-hover:opacity-100 lg:group-odd:right-0 lg:group-even:left-0'></span>
                 </Link>
               </Container>
             </div>
           </div>
           {/* Menu Footer */}
-          <Container className='grid grid-cols-2 py-16'>
+          <Container className='grid grid-cols-1 lg:grid-cols-2 py-16'>
             <div id='menu-open-footer-left'>
               <h3 className='pb-7 text-lg'>Availability</h3>
               <div className='flex gap-12'>
